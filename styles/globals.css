@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply font-montserrat text-[#232428]
+    }
+}
+
+@layer components {
+    .headerLink {
+        @apply font-cardo cursor-pointer opacity-75 transition hover:opacity-100 text-[#FCFCFC] text-lg font-semibold tracking-wider;
+    }
+
+    .headerIcon {
+        @apply h-10 w-10 bg-[#FFCA42] flex items-center
+        justify-center cursor-pointer hover:bg-[#e0ba59] transition-colors duration-300 relative;
+    }
+
+    .container {
+        max-width: 1820px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .container-fluid {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .tabPanel {
+        @apply grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
+      }
+      .logo {
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 58px;
+        display: block;
+        color: #F5F8FC;
+        letter-spacing: 0.05em;
+    }
+}
