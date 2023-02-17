@@ -13,7 +13,7 @@
 
 @layer components {
     .headerLink {
-        @apply font-cardo cursor-pointer opacity-75 transition hover:opacity-100 text-[#FCFCFC] text-lg font-semibold tracking-wider;
+        @apply font-cardo cursor-pointer uppercase opacity-75 transition hover:opacity-100 text-[#FCFCFC] text-lg font-semibold tracking-wider;
     }
 
     .headerIcon {
@@ -26,14 +26,17 @@
         margin: 0 auto;
         padding: 0 10px;
     }
+
     .container-fluid {
         max-width: 1220px;
         margin: 0 auto;
         padding: 0 10px;
     }
+
     .tabPanel {
         @apply grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
       }
+
       .logo {
         font-weight: 700;
         font-size: 44px;
