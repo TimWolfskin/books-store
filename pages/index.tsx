@@ -8,6 +8,7 @@ import { fetchCategories } from "../utils/fetchCategories";
 import { fetchProducts } from "../utils/fetchProducts";
 import { getSession } from "next-auth/react";
 import type { Session } from "next-auth";
+import Benefits from "../components/Benefits";
 
 interface Props {
   categories: Category[];
@@ -18,26 +19,25 @@ interface Props {
 const Home = ({ categories, products }: Props) => {
   const showProducts = (category: number) => {
     return products
-    .filter((product) => product.category._ref === categories[category]._id)
-    .map((product) => <Product product={product} key={product._id} />) //filter products by category
-  }
+      .filter((product) => product.category._ref === categories[category]._id)
+      .map((product) => <Product product={product} key={product._id} />); //filter products by category
+  };
 
   return (
     <div className="">
       <Head>
-        <title>Apple Redesign</title>
+        <title>Pages</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
+      <Landing />
+      <Benefits />
 
-      <main className="relative h-[200vh] bg-[#E7ECEE]">
-        <Landing />
-      </main>
-      <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1B1B1B]">
+      <section className="">
         <div className="space-y-10 py-16">
-          <h1 className="text-center text-4xl font-medium tracking-wide text-white md:text-5xl">
-            New Promos
+          <h1 className="text-center font-cardo text-4xl font-medium tracking-wide text-[#35383C] md:text-5xl">
+            NEW ARRIVALS
           </h1>
 
           <Tab.Group>
@@ -47,7 +47,7 @@ const Home = ({ categories, products }: Props) => {
                   key={category._id}
                   id={category._id}
                   className={({ selected }) =>
-                    `whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
+                    `whitespace-nowrap  py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
                       selected
                         ? "borderGradient bg-[#35383C] text-white"
                         : "border-b-2 border-[#35383C] text-[#747474]"
@@ -63,6 +63,7 @@ const Home = ({ categories, products }: Props) => {
               <Tab.Panel className="tabPanel">{showProducts(1)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(2)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(3)}</Tab.Panel>
+              <Tab.Panel className="tabPanel">{showProducts(4)}</Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
         </div>
