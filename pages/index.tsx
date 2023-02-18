@@ -49,8 +49,8 @@ const Home = ({ categories, products }: Props) => {
                   className={({ selected }) =>
                     `whitespace-nowrap  py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
                       selected
-                        ? "borderGradient bg-[#35383C] text-white"
-                        : "border-b-2 border-[#35383C] text-[#747474]"
+                        ? "borderGradient bg-[#d14031] text-white"
+                        : " text-[#747474]"
                     }`
                   }
                 >

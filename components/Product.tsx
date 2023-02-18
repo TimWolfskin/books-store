@@ -38,10 +38,10 @@ function Product({ product }: Props) {
         </div>
 
         <div
-          className="flex h-16 w-16 flex-shrink-0 cursor-pointer items-center justify-center rounded-full bg-black"
+          className="flex h-12 w-12 flex-shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#d14031]"
           onClick={addItemToBasket}
         >
-          <AddShoppingCartOutlinedIcon className="h-8 w-8 text-white" />
+          <AddShoppingCartOutlinedIcon className="h-6 w-6 text-white" />
         </div>
       </div>
     </div>
