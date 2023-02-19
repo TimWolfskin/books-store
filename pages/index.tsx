@@ -9,6 +9,7 @@ import { fetchProducts } from "../utils/fetchProducts";
 import { getSession } from "next-auth/react";
 import type { Session } from "next-auth";
 import Benefits from "../components/Benefits";
+import Banner from "../components/Banner";
 
 interface Props {
   categories: Category[];
@@ -47,7 +48,7 @@ const Home = ({ categories, products }: Props) => {
                   key={category._id}
                   id={category._id}
                   className={({ selected }) =>
-                    `whitespace-nowrap  py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
+                    `whitespace-nowrap  py-3 px-5 font-montserrat text-2xl  font-semibold outline-none md:py-4 md:px-6 md:text-base ${
                       selected
                         ? "borderGradient bg-[#d14031] text-white"
                         : " text-[#747474]"
@@ -68,6 +69,7 @@ const Home = ({ categories, products }: Props) => {
           </Tab.Group>
         </div>
       </section>
+      <Banner />
     </div>
   );
 };
