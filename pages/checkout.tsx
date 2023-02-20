@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Currency from "react-currency-formatter";
 import { useSelector } from "react-redux";
 import Stripe from "stripe";
-import Button from "../components/Button";
+import Button from "../components/ui/Button";
 import { selectBasketItems, selectBasketTotal } from "../redux/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
 import { fetchPostJSON } from "../utils/api-helpers";

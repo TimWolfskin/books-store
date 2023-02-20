@@ -2,14 +2,15 @@ import { Tab } from "@headlessui/react";
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
-import Landing from "../components/Landing";
+import Landing from "../components/home/Landing";
 import Product from "../components/Product";
 import { fetchCategories } from "../utils/fetchCategories";
 import { fetchProducts } from "../utils/fetchProducts";
 import { getSession } from "next-auth/react";
 import type { Session } from "next-auth";
-import Benefits from "../components/Benefits";
-import Banner from "../components/Banner";
+import Benefits from "../components/home/Benefits";
+import Banner from "../components/home/Banner";
+import News from "../components/home/News";
 
 interface Props {
   categories: Category[];
@@ -70,6 +71,7 @@ const Home = ({ categories, products }: Props) => {
         </div>
       </section>
       <Banner />
+      <News />
     </div>
   );
 };
