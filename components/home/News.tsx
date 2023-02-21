@@ -71,7 +71,7 @@ const News = () => {
               <span className="ml-2 text-gray-600">John Doe</span>
             </a>
           </div>
-          <div className="h-auto w-auto">
+          <div className="mb-3 max-w-[480px]">
             <p className="line-clamp-3 text-lg leading-normal text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
               explicabo ipsa laudantium maxime nemo non numquam praesentium quia
