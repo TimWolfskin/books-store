@@ -11,6 +11,7 @@ import type { Session } from "next-auth";
 import Benefits from "../components/home/Benefits";
 import Banner from "../components/home/Banner";
 import News from "../components/home/News";
+import BannerSale from "../components/home/BannerSale";
 
 interface Props {
   categories: Category[];
@@ -72,6 +73,7 @@ const Home = ({ categories, products }: Props) => {
       </section>
       <Banner />
       <News />
+      <BannerSale />
     </div>
   );
 };
