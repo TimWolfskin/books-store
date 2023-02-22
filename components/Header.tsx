@@ -13,7 +13,7 @@ function Header() {
   const items = useSelector(selectBasketItems);
 
   return (
-    <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-[#242424] pt-5 pb-5">
+    <header className="sticky top-0 z-50 flex w-full items-center justify-between bg-[#242424] pt-5 pb-5">
       <div className="flex items-center justify-center md:w-1/5">
         <Link className="flex items-center" href="/">
           <Image

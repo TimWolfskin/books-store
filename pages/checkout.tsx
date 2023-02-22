@@ -11,6 +11,7 @@ import { selectBasketItems, selectBasketTotal } from "../redux/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
 import { fetchPostJSON } from "../utils/api-helpers";
 import getStripe from "../utils/get-stripejs";
+import Footer from "../components/home/Footer";
 
 function Checkout() {
   const items = useSelector(selectBasketItems);
@@ -69,8 +70,10 @@ function Checkout() {
         <title>Bag punchR</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header className="header">
       <Header />
-      <main className="mx-auto max-w-5xl pb-24">
+      </header>
+      <main className="main mx-auto max-w-5xl pb-24">
         <div className="px-5">
           <h1 className="my-4 text-3xl font-semibold lg:text-4xl">
             {items.length > 0 ? "Review your bag." : "Your bag is empty."}
@@ -148,6 +151,9 @@ function Checkout() {
           </div>
         )}
       </main>
+      <footer className="footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

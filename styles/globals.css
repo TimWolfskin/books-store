@@ -5,20 +5,25 @@
 @tailwind utilities;
 
 
+
 @layer base {
     body {
-        @apply font-montserrat text-[#232428]
+        @apply font-montserrat text-[#232428] ;
     }
 }
 
 @layer components {
+    .main {
+        min-height: 65vh;
+        display: flex;
+        flex-direction: column;
+    }
     .headerLink {
         @apply font-cardo cursor-pointer uppercase opacity-75 transition hover:opacity-100 text-[#FCFCFC] text-lg font-semibold tracking-wider;
     }
 
     .headerIcon {
-        @apply h-10 w-10 bg-[#FFCA42] flex items-center
-        justify-center cursor-pointer hover:bg-[#e0ba59] transition-colors duration-300 relative;
+        @apply h-10 w-10 bg-[#FFCA42] flex items-center justify-center cursor-pointer hover:bg-[#e0ba59] transition-colors duration-300 relative;
     }
 
     .container {
@@ -35,9 +40,9 @@
 
     .tabPanel {
         @apply grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
-      }
+    }
 
-      .logo {
+    .logo {
         font-weight: 700;
         font-size: 44px;
         line-height: 58px;

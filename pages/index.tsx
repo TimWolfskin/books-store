@@ -12,7 +12,9 @@ import Benefits from "../components/home/Benefits";
 import Banner from "../components/home/Banner";
 import News from "../components/home/News";
 import BannerSale from "../components/home/BannerSale";
-import Newsletters from "../components/Newsletters";
+import Newsletters from "../components/home/Newsletters";
+import Social from "../components/home/Social";
+import Footer from "../components/home/Footer";
 
 interface Props {
   categories: Category[];
@@ -75,7 +77,9 @@ const Home = ({ categories, products }: Props) => {
       <Banner />
       <News />
       <BannerSale />
+      <Social />
       <Newsletters />
+      <Footer />
     </div>
   );
 };
